@@ -1,0 +1,36 @@
+{
+  "name": "adjunct",
+  "main": "./adjunct.js",
+  "version": "1.0.0",
+  "description": "adjunct - extending JavaScript, plus some generic polyfills",
+  "homepage": "http://chancejs.com",
+  "author": "Benjamin Mastripolito <benjamin.mastripolito@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Lemoncreme/adjunct/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lemoncreme/adjunct.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    //"test": "gulp travis"
+  },
+  "keywords": [
+    "polyfill",
+    "extend",
+    "javascript",
+    "vanilla"
+  ],
+  "jam": {
+    "main": "chance.js"
+  },
+  "github": "https://github.com/Lemoncreme/adjunct",
+  "maintainers": [
+    {
+      "name": "Benjamin Mastripolito",
+      "email": "benjamin.mastripolito@gmail.com",
+      "web": "http://signless.science"
+    }
+  ]
+}
