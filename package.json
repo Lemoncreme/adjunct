@@ -13,9 +13,6 @@
     "url": "https://github.com/Lemoncreme/adjunct.git"
   },
   "license": "MIT",
-  "scripts": {
-    //"test": "gulp travis"
-  },
   "keywords": [
     "polyfill",
     "extend",
