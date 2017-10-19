@@ -127,12 +127,34 @@
 	}
 	if (typeof Array.prototype.flatten == "undefined") {
 		/**
-		 * Removes all elements from the array
+		 * Places all element in nested arrays into root
 		 */
 		Array.prototype.flatten = function () {
-			var strung = String(this).split(",");
-			this.length = 0;
-			this.concat(strung);
+			for(var i = this.length - 1; i >= 0; i--) {
+				if (this[i].constructor.name == "Array") {
+					this.splice(i, 1)[0].flatten().forEach(function(e){
+						this.push(e);
+					}, this);
+					i = this.length - 1;
+				}
+			}
+			return this;
+		};
+	}
+	if (typeof String.prototype.demarcate == "undefined") {
+		/**
+		 * Places all element in nested arrays into root
+		 */
+		Array.prototype.flatten = function () {
+			for(var i = this.length - 1; i >= 0; i--) {
+				if (this[i].constructor.name == "Array") {
+					this.splice(i, 1)[0].flatten().forEach(function(e){
+						this.push(e);
+					}, this);
+					i = this.length - 1;
+				}
+			}
+			return this;
 		};
 	}
 })();
