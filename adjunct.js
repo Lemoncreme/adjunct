@@ -145,16 +145,14 @@
 		/**
 		 * Places all element in nested arrays into root
 		 */
-		Array.prototype.flatten = function () {
-			for(var i = this.length - 1; i >= 0; i--) {
-				if (this[i].constructor.name == "Array") {
-					this.splice(i, 1)[0].flatten().forEach(function(e){
-						this.push(e);
-					}, this);
-					i = this.length - 1;
-				}
-			}
-			return this;
+		String.prototype.demarcate = function (delimeter, demarcator) {
+			var result = {};
+			var member;
+			this.split(delimeter).forEach(function(item){
+				member = item.split(demarcator);
+				result[member[0]] = member[1];
+			}, this);
+			return result;
 		};
 	}
 })();
