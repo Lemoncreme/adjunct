@@ -144,10 +144,6 @@
 	if (typeof String.prototype.demarcate == "undefined") {
 		/**
 		 * Places all element in nested arrays into root
-		 * 
-		 * @param {String} delimeter string split between members
-		 * @param {String} demarcator string split between key and value
-		 * @return {Object} the resultant object from demarcation
 		 */
 		String.prototype.demarcate = function (delimeter, demarcator) {
 			var result = {};
